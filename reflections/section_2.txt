@@ -1,3 +1,11 @@
 Root, the Superuser
 root - access typically restricted to system administrators
 ~ 'tilda', represents the home directory
+
+pwd: display Present Working Directory
+man: manual pages
+echo: displays file contents
+exit: exit session
+clear: clear screen
+
+echo $PATH: display PATH string
