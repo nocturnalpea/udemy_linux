@@ -1,0 +1,18 @@
+# Section 1 background notes
+
+Virtualbox VDI installation:
+1. Click use existing vdi image
+2. click create to start the boot
+
+Notes:
+
+Common directories:
+/ (Root): everything starts at the root, ie 'slash'.
+/bin:     binaries and other executable programs
+/etc:     system configuration files
+/home:    where you separate different user folders and files
+/opt:     optional or third party software
+/tmp: 	  temp space, cleared on reboot (erased)
+/usr: 	  user related programs
+/var:	  variable data
+

@@ -1,0 +1,3 @@
+Root, the Superuser
+root - access typically restricted to system administrators
+~ 'tilda', represents the home directory
