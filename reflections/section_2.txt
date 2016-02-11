@@ -19,3 +19,4 @@ which : use this command to find the path to a command
 --help or -h: help command
 -k : man -k [search term] , search the man pages
 
+git config --global credential.helper wincred : sets up GitHub password in Git
