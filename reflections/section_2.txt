@@ -9,3 +9,13 @@ exit: exit session
 clear: clear screen
 
 echo $PATH: display PATH string
+
+Summary Lecture 20: How to Fish
+man - used to display documentation
+$PATH controls search path...
+	echo $PATH displays the search directories whenever we enter a command at prompt
+which : use this command to find the path to a command
+	i.e. which cat, which pwd, etc...
+--help or -h: help command
+-k : man -k [search term] , search the man pages
+
