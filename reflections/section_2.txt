@@ -20,3 +20,10 @@ which : use this command to find the path to a command
 -k : man -k [search term] , search the man pages
 
 git config --global credential.helper wincred : sets up GitHub password in Git
+** this is for Windows system
+
+For Linux:
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+	** change time in seconds, 3600 = 1 hours.
+
