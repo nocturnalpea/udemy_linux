@@ -1,0 +1,47 @@
+Lecture 50: Customizing the Shell Prompt
+echo $PS1 show what the prompt looks like currently
+
+Lecture 55: Processes and Job Control
+ps - command to see processes
+
+ps -e
+ps -ef
+ps-eH
+ps -e --forest
+
+pstree
+top
+htop
+
+Switching Users:
+
+su [username]
+whoami
+
+sudo - Super User Do
+sudo -l : list available commands
+sudo command : run command as super user
+sudo su - switch to super user with root
+sudo -u root -s, same as sudo -s
+sudo -u user -s
+sudo -s, same as sudo -u root -s
+
+Lecture 61: shell history, tab completion, command line editing
+history, display list of commands in shell history
+!! repeat previous comand line
+!string
+
+Lecture 63: Installing Software
+usually install with packages 'pkg'
+
+apt - advanced packaging tool
+apt-get install [y] package (accepts yes automatically)
+
+dpkg -l, list files in package
+
+apt-cache search [program name]
+ie apt-cache search inkscape
+
+apt-cache show inscape | less
+
+
