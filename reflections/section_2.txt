@@ -28,3 +28,145 @@ git config --global credential.helper 'cache --timeout=3600'
 	** change time in seconds, 3600 = 1 hours.
 
 ** test test; see if caching works... test test**
+
+. 'this directory'
+.. 'parent directory'
+$ pwd
+/home/jason
+$ cd ..
+/home
+
+./command
+echo $PATH
+
+mkdir - creates new directory
+rmdir - removes directory (only if empty)
+rm -rf directory - if there are contents inside the directory. this is hard erase
+examples:
+mkdir dir1
+mkdir dir1/dir2/dir3
+this won't create because no parents
+instead, do this...
+mkdir -p dir/1/dir2/dir3 # -p is parent...create parents
+
+Lecture 24: Listing Files and Understanding is Output
+what is 'ls -l'?
+-l is long format
+ie. -rw-rw-r-- 1 jason users 10400 Sept27...
+
+hidden files begin with .
+use ls -a to output 'all' files
+
+ls -t # sort by time
+ls -r $ sort by reverse
+ls -latr # sort long listing, all files, time
+
+ls -R # all contents in the directory and below
+
+tree -d : list directories only
+
+naming directories:
+camelCase
+_underscore
+use-hyphen
+
+Decoder ring for permissions, ie via ls -l
+-rw-r--r--
+- : Type
+rw- : User
+r-- : Group
+r-- : Other
+
+Changing Permissions:
+chmod - change mode
+rwx - read, write, execute
+ugoa - u for user, g for group, o for other, a for all
++-= - + to add permission, - to subtract, = explicitely set
+Example: add write permission for the members of a file's group, you would say:
+chmod g+w filename (g(group)+(add) w(write permission))
+ie. chmod g+w sales.data
+
+numeric based permission: ie chmod 754 filename (see table to get listing)
+
+chgrp - change group 
+
+chmod 777 give user,group, other full permission to read,write,execute
+
+Lecture 28: Finding Files
+find [path...] [expression]
+
+find . -name pattern # finds files whose name matches pattern
+find . -iname pattern # same as name but ignores case
+
+locate pattern # a more rapid search method
+
+head -2 [filename] displays the first two lines in the file
+tail -3 [filename] displays the bottom last three lines in the file
+
+to follow files in real-time:
+tail -f filename
+
+Lecture 33: Editing Files with Vi
+
+vi [filename] - enters edit mode of filename
+
+
+Lecture 39: Delete, Copying, Moving, Renaming Files
+
+rm file
+rm -r dir
+rm -f file : force removal without confirmation
+rm s*
+
+cp source_file destination_file
+cp -i : interactive mode
+cp -r source_directory destination (r recursively)
+
+mv can be used to move directory or rename
+
+sort file
+sort -k F sort by key
+
+tar/gzip/gunzip/zcat etc...
+
+du estimates file usage
+
+Wildcards (Lesson 40):
+* matches zero or more characters
+? matches exactly one character (a?.txt)
+
+Lecture 42: Input, Output, Redirection
+stdin
+stdout
+stderr
+
+Comparing Files
+diff
+sdiff
+vimdiff
+
+grep : search for text in a file
+grep pattern file : find pattern in file
+
+grep -v pattern file, invert match, return lines that do not match pattern
+
+grep -i ignore case
+
+Pipes:
+
+| pipe symbol
+
+command output | command input
+cat file | grep pattern
+output from cat gets passed to grep
+
+Lecture 47: Transferring Files over the Network
+ftp host
+	not encrypted
+use sftp for s-secure
+
+
+
+
+
+
